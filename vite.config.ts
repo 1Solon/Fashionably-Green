@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { VitePWA, VitePWAOptions } from 'vite-plugin-pwa'
+import svgr from 'vite-plugin-svgr'
 
 const manifestForPlugin: Partial<VitePWAOptions> = {
   registerType: "prompt" ,
@@ -45,5 +46,5 @@ const manifestForPlugin: Partial<VitePWAOptions> = {
 // https://vitejs.dev/config/
 export default defineConfig({
     base: "./",
-    plugins: [react(), VitePWA(manifestForPlugin)],
+    plugins: [react(), VitePWA(manifestForPlugin), svgr()],
 });
