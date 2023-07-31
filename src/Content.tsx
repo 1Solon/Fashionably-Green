@@ -43,7 +43,7 @@ export default function Content() {
             </Box>
             <br />
             <Typography variant="subtitle1" gutterBottom>
-              Progress to next EcoLevel:
+              €500 to next EcoLevel:
             </Typography>
             <Box sx={{ width: '92%' }}>
               <LinearProgress variant="determinate" value={progress} />
