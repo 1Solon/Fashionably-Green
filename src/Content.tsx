@@ -1,9 +1,11 @@
 import React from 'react';
 import Typography from '@mui/material/Typography';
-import { Badge, Button, Card, CardActionArea, CardActions, CardContent, CardMedia, LinearProgress, Paper, Step, StepLabel, Stepper } from '@mui/material';
+import { Badge, Button, Card, CardActionArea, CardActions, CardContent, CardMedia, LinearProgress, LinearProgressProps, Paper, Step, StepLabel, Stepper } from '@mui/material';
 import Box from '@mui/system/Box';
 import { Stack } from '@mui/system';
 import SellIcon from '@mui/icons-material/Sell';
+import pronote from './assets/pronote.svg';
+import iherb from './assets/herb.svg';
 
 function LinearProgressWithLabel(props: LinearProgressProps & { value: number }) {
   return (
@@ -58,12 +60,9 @@ export default function Content() {
           <Stack spacing={1}>
             <Card sx={{}}>
               <CardActionArea>
-                <CardMedia
-                  component="img"
-                  height="140"
-                  image="/src/assets/herb.svg"
-                  alt="green iguana"
-                />
+                <CardMedia>
+                  <img src={iherb} alt="logo" style={{ maxWidth: '100%', height: '100%' }} />
+                </CardMedia>
                 <CardContent>
                   <Stack spacing={1}>
                     <Typography gutterBottom variant="h5" component="div">
@@ -107,12 +106,10 @@ export default function Content() {
           <Stack spacing={1}>
             <Card sx={{}}>
               <CardActionArea>
-                <CardMedia
-                  component="img"
-                  height="140"
-                  image="/src/assets/pronote.svg"
-                  alt="green iguana"
-                />
+                <CardMedia>
+                  <img src={pronote} alt="logo" style={{ maxWidth: '100%', height: '100%' }} />
+                </CardMedia>
+
                 <CardContent>
                   <Stack spacing={1}>
                     <Typography gutterBottom variant="h5" component="div">

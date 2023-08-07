@@ -16,9 +16,11 @@ import Logo from './assets/logo-no-background.svg'
 const pages = ['Search', 'Scan'];
 const settings = ['Profile', 'Logout'];
 
+interface Props {
+    onDrawerToggle: () => void;
+}
 
-
-function ResponsiveAppBar() {
+const ResponsiveAppBar: React.FC<Props> = ({ onDrawerToggle }) => {
     const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
     const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
 
@@ -41,6 +43,16 @@ function ResponsiveAppBar() {
         <AppBar position="static">
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
+                    <IconButton
+                        size="large"
+                        edge="start"
+                        color="inherit"
+                        aria-label="open drawer"
+                        sx={{ mr: 2, ...({ display: 'none' }) }}
+                        onClick={onDrawerToggle}
+                    >
+                        <MenuIcon />
+                    </IconButton>
                     <Box sx={{ display: { xs: 'none', md: 'flex' }, width: 180, height: 100, mr: 1 }}>
                         <img src={Logo} alt="logo" style={{ maxWidth: '100%', height: 'auto' }} />
                     </Box>
@@ -99,7 +111,7 @@ function ResponsiveAppBar() {
                     </Box>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         {pages.map((page) => (
-                            <Button 
+                            <Button
                                 color='secondary'
                                 key={page}
                                 onClick={handleCloseNavMenu}
