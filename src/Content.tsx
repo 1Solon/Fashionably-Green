@@ -4,8 +4,8 @@ import { Badge, Button, Card, CardActionArea, CardActions, CardContent, CardMedi
 import Box from '@mui/system/Box';
 import { Stack } from '@mui/system';
 import SellIcon from '@mui/icons-material/Sell';
-import pronote from './assets/pronote.svg';
-import iherb from './assets/herb.svg';
+import Lee from './assets/lee.svg';
+import Helly from './assets/helly.svg';
 
 function LinearProgressWithLabel(props: LinearProgressProps & { value: number }) {
   return (
@@ -61,12 +61,12 @@ export default function Content() {
             <Card sx={{}}>
               <CardActionArea>
                 <CardMedia>
-                  <img src={iherb} alt="logo" style={{ maxWidth: '100%', height: '100%' }} />
+                  <img src={Helly} alt="logo" style={{ maxWidth: '5%', height: '5%' }} />
                 </CardMedia>
                 <CardContent>
                   <Stack spacing={1}>
                     <Typography gutterBottom variant="h5" component="div">
-                      iHerb
+                      HellyHansen
                     </Typography>
                     <Box sx={{ width: '92%' }}>
                       <LinearProgressWithLabel value={10} />
@@ -107,13 +107,13 @@ export default function Content() {
             <Card sx={{}}>
               <CardActionArea>
                 <CardMedia>
-                  <img src={pronote} alt="logo" style={{ maxWidth: '100%', height: '100%' }} />
+                  <img src={Lee} alt="logo" style={{ maxWidth: '5%', height: '5%' }} />
                 </CardMedia>
 
                 <CardContent>
                   <Stack spacing={1}>
                     <Typography gutterBottom variant="h5" component="div">
-                      Pronote
+                      Lee Sport
                     </Typography>
                     <Box sx={{ width: '92%' }}>
                       <LinearProgressWithLabel value={77} />
