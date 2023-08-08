@@ -61,7 +61,9 @@ export default function Content() {
             <Card sx={{}}>
               <CardActionArea>
                 <CardMedia>
-                  <img src={Helly} alt="logo" style={{ maxWidth: '5%', height: '5%' }} />
+                  <Box sx={{ display: { xs: 'none', md: 'flex' }, width: 180, height: 100, mr: 1 }}>
+                    <img src={Helly} alt="logo" style={{ maxWidth: '100%', height: '100%' }} />
+                  </Box>
                 </CardMedia>
                 <CardContent>
                   <Stack spacing={1}>
@@ -107,7 +109,9 @@ export default function Content() {
             <Card sx={{}}>
               <CardActionArea>
                 <CardMedia>
-                  <img src={Lee} alt="logo" style={{ maxWidth: '5%', height: '5%' }} />
+                  <Box sx={{ display: { xs: 'none', md: 'flex' }, width: 180, height: 100, mr: 1 }}>
+                    <img src={Lee} alt="logo" style={{ maxWidth: '100%', height: '100%' }} />
+                  </Box>
                 </CardMedia>
 
                 <CardContent>
